@@ -31,7 +31,6 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const { context, github } = require('@actions/github');
             const prNumber = context.payload.pull_request.number;
 
             await github.rest.pulls.merge({
